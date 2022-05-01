@@ -1,0 +1,47 @@
+
+<div class="menu menu-top">
+  {% url 'home' as home %}
+  {% if home > '' %}
+    {% if home == url_here %}
+      <div class="menu-item menu-here">
+        Home
+      </div>
+    {% else %}
+      <div class="menu-item">
+        <a href="{{ home }}">Home</a>
+      </div>
+    {% endif %}
+  {% endif %}
+  {% if perms.ervinloads.view_load %}
+    {% url 'ervinloads:load-list' as ervinloads_url %}
+    {% if ervinloads_url == url_here %}
+      <div class="menu-item menu-here">
+        Loads
+      </div>
+    {% else %}
+      <div class="menu-item">
+        <a href="{{ ervinloads_url }}">Loads</a>
+      </div>
+    {% endif %}
+  {% endif %}
+  {% if user.is_staff %}
+    <div class='menu-item'>
+      <a href="{% url 'admin:app_list' 'ervinloads' %}..">
+        Admin
+      </a>
+    </div>
+  {% endif %}
+  {% if user.username %}
+    {% url 'profile' as profile %}
+    <div class="menu-item">
+      {% if profile > '' %}
+        <a href="{{ profile }}">{{ user }}</a>
+      {% else %}
+        {{ user.username }}
+      {% endif %}
+      <a href="{% url 'logout' %}">/ Logout</a>
+    </div>
+  {% else %}
+    <div class="menu-item"><a href="{% url 'login' %}">Login</a></div>
+  {% endif %}
+</div>
