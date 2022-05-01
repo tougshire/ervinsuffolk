@@ -1,5 +1,5 @@
 .body, h1, h2 {
-    color:darkblue;
+    color:darkgreen;
 }
 .hidden {
     display:none;
@@ -55,17 +55,17 @@
     display:table-row
 }
 .list .rowhead {
-    background-color:#eeeeff;
+    background-color:#eeffee;
 }
 
 .list .field {
     display:table-cell;
-    border: 1px solid lightblue;
+    border: 1px solid lightgreen;
     padding-left: .2em;
     padding-right: .2em;
 }
 .list .rowhead .field {
-    border:1px solid blue;
+    border:1px solid green;
 }
 .list .field::after {
     content: "\00a0"
@@ -115,11 +115,11 @@
 /* Colors */
 .menu {
     color: white;
-    background-color:cornflowerblue;
+    background-color: forestgreen;
 }
 
 .app-menu {
-    background-color:cadetblue
+    background-color:lightseagreen
 }
 
 .menu a:link, .menu a:visited {
