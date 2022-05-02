@@ -150,6 +150,9 @@ PROJECT_INCLUDE_FILES = {
 
 DEFAULT_FROM_EMAIL = 'ervinsuffolk@tougshire.com'
 
+ERVINSUFFOLK_FROM_EMAIL = 'warehouse@ervinsuffolk.space'
+
 EMAIL_BACKEND = env('EMAIL_BACKEND')
 
 SENDINBLUE_API_KEY = env('SENDINBLUE_API_KEY')
+
