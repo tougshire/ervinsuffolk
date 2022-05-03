@@ -92,6 +92,8 @@ DATABASES = {
 
 AUTH_USER_MODEL = 'tougshire_auth.TougshireAuthUser'
 
+AUTH_USER_CASE_INSENSITIVE = True
+
 TOUGSHIRE_AUTH_MENU_FILE = 'ervinsuffolk/menu.html'
 
 # Password validation
