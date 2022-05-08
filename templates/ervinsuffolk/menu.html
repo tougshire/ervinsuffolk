@@ -1,6 +1,6 @@
 
 <div class="menu menu-top">
-  {% url 'home' as home %}
+  {% url 'ervinhome:home' as home %}
   {% if home > '' %}
     {% if home == url_here %}
       <div class="menu-item menu-here">
@@ -12,6 +12,18 @@
       </div>
     {% endif %}
   {% endif %}
+  {% comment %} {% if perms.ervinloads.view_... %} {% endcomment %}
+    {% url 'ervinhome:directions' as directions_url %}
+    {% if directions_url == url_here %}
+      <div class="menu-item menu-here">
+        Directions
+      </div>
+    {% else %}
+      <div class="menu-item">
+        <a href="{{ directions_url }}">Directions</a>
+      </div>
+    {% endif %}
+  {% comment %} {% endif %} {% endcomment %}
   {% if perms.ervinloads.view_load %}
     {% url 'ervinloads:load-list' as ervinloads_url %}
     {% if ervinloads_url == url_here %}
