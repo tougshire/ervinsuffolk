@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'anymail',
+    'home.apps.HomeConfig',
     'tougshire_history.apps.TougshireHistoryConfig',
     'touglates.apps.TouglatesConfig',
     'tougshire_vistas.apps.TougshireVistasConfig',
